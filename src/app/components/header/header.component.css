@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.img {
+  height: 100px;
+  width: 100px;
+}
+
+@media(max-width:500px) {
+  .img {
+    display: none;
+  }
+}

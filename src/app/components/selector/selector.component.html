@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="form">
+  <h4>Wybierz rasę: </h4>
+  <form [formGroup]="form">
+    <select formControlName="name" (change)="onDogSelect(form.value)">
+        <option *ngFor="let dog of options" [value]="dog">
+            {{ dog }}
+        </option>
+    </select>
+  </form>
+  </div>
+  <div class="selector-content">
+    <img [src]="safeImgURL" alt=''>
+    <div class="description">
+      <div *ngIf="dogURL">Zobacz więcej na:</div>
+      <a [href]="dogURL">{{dogSelected}}</a>
+    </div>
+  </div>
+</div>
